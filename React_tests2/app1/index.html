@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Hello React</title>
+</head>
+<body>
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+
+<div id="container"> </div>
+<style>
+  button.on { color: red }
+  button.off { color: green }
+</style>
+<script type="text/babel">
+
+class ClickButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {class: "off", label: "Нажми"};
+    this.press = this.press.bind(this);
+  }
+  press() {
+    var className = (this.state.class==="off")?"on":"off";
+    this.setState({class: className});
+  }
+  render() {
+    return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
+  }
+}
+
+ReactDOM.render(
+  <ClickButton />,
+  document.getElementById("container")
+);
+
+</script>
+
+</body>
+</html>
