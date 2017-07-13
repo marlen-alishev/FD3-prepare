@@ -16,5 +16,7 @@ VotesBlock7 -
   событие создаётся глобально в window
   для сборки используем Browserify
 VotesBlock8 - выносим событие в отдельный модуль
-VotesBlock9 - заменяем React.createClass на ES6-классы
+VotesBlock9 - 
+  заменяем React.createClass на ES6-классы
+  автоматизируем процесс сборки
 VotesBlock10 - для сборки используем Webpack
