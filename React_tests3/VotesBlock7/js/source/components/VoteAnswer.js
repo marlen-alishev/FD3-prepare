@@ -1,6 +1,8 @@
 ﻿"use strict";
 
-VoteAnswer = React.createClass({
+var React = require('react');
+
+var VoteAnswer = React.createClass({
 
   getInitialState: function() {
     return { 
@@ -22,7 +24,7 @@ VoteAnswer = React.createClass({
   },
 
   changed: function(EO) {
-    voteEvents.emit('AnswerChanged',EO.target.value);
+    //voteEvents.emit('AnswerChanged',EO.target.value);
   },
 
   render: function(){
@@ -48,3 +50,5 @@ VoteAnswer = React.createClass({
   },
 
 });
+
+module.exports = VoteAnswer;

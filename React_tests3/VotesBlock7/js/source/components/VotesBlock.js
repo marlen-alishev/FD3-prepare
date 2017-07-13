@@ -1,6 +1,9 @@
 ﻿"use strict";
 
-VotesBlock = React.createClass({
+var React = require('react');
+import VoteAnswer from './VoteAnswer';
+
+var VotesBlock = React.createClass({
 
   getInitialState: function() {
     return { 
@@ -15,11 +18,11 @@ VotesBlock = React.createClass({
   },
 
   componentDidMount: function() {
-    voteEvents.addListener('AnswerChanged',this.answerChanged);
+    //voteEvents.addListener('AnswerChanged',this.answerChanged);
   },
 
   componentWillUnmount: function() {
-    voteEvents.removeListener('AnswerChanged',this.answerChanged);
+    //voteEvents.removeListener('AnswerChanged',this.answerChanged);
   },
 
   registerVote: function() {
@@ -53,3 +56,5 @@ VotesBlock = React.createClass({
   },
 
 });
+
+module.exports = VotesBlock;

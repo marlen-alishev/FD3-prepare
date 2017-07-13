@@ -9,4 +9,7 @@ VotesBlock3 - подключен Babel, JSX
 VotesBlock4 - перешли от передачи callback через props к EventEmitter
 VotesBlock5 - перешли к npm и локальному lite-server вместо Apache
 VotesBlock6 - используем глобальный lite-server
-VotesBlock7 - пробуем отказаться от загружаемых react и babel, заменяем на модули npm, правильная структура каталогов, возможно модульность
+VotesBlock7 - 
+  пробуем отказаться от загружаемых react и babel, заменяем на модули npm
+  правильная структура каталогов
+  модули CommonJS
