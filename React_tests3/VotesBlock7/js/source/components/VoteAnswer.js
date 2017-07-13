@@ -1,6 +1,7 @@
 ﻿"use strict";
 
 var React = require('react');
+var EventEmitter = require('events').EventEmitter;
 
 var VoteAnswer = React.createClass({
 
@@ -24,7 +25,7 @@ var VoteAnswer = React.createClass({
   },
 
   changed: function(EO) {
-    //voteEvents.emit('AnswerChanged',EO.target.value);
+    window.voteEvents.emit('AnswerChanged',EO.target.value);
   },
 
   render: function(){

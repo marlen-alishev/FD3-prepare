@@ -1,7 +1,10 @@
 "use strict";
-import React from 'react';
-import ReactDOM from 'react-dom';
-import VotesBlock from './components/VotesBlock';
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+var EventEmitter = require('events').EventEmitter;
+
+var VotesBlock = require('./components/VotesBlock');
 
 var votesInfo={
     question:'Как вы относитесь к программированию?',
@@ -13,7 +16,7 @@ var votesInfo={
     ],
 };
 
-//var voteEvents=new EventEmitter();
+window.voteEvents=new EventEmitter();
 
 ReactDOM.render(
     <VotesBlock info={votesInfo} showMode="2" />,

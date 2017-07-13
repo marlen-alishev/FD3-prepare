@@ -1,7 +1,9 @@
 ﻿"use strict";
 
 var React = require('react');
-import VoteAnswer from './VoteAnswer';
+var EventEmitter = require('events').EventEmitter;
+
+var VoteAnswer = require('./VoteAnswer');
 
 var VotesBlock = React.createClass({
 
@@ -18,11 +20,11 @@ var VotesBlock = React.createClass({
   },
 
   componentDidMount: function() {
-    //voteEvents.addListener('AnswerChanged',this.answerChanged);
+    window.voteEvents.addListener('AnswerChanged',this.answerChanged);
   },
 
   componentWillUnmount: function() {
-    //voteEvents.removeListener('AnswerChanged',this.answerChanged);
+    window.voteEvents.removeListener('AnswerChanged',this.answerChanged);
   },
 
   registerVote: function() {

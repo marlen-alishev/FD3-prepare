@@ -1,13 +1,9 @@
 "use strict";
 
-var _VoteAnswer = require('./VoteAnswer');
-
-var _VoteAnswer2 = _interopRequireDefault(_VoteAnswer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var React = require('react');
+var EventEmitter = require('events').EventEmitter;
 
+var VoteAnswer = require('./VoteAnswer');
 
 var VotesBlock = React.createClass({
   displayName: 'VotesBlock',
@@ -26,11 +22,11 @@ var VotesBlock = React.createClass({
   },
 
   componentDidMount: function componentDidMount() {
-    //voteEvents.addListener('AnswerChanged',this.answerChanged);
+    window.voteEvents.addListener('AnswerChanged', this.answerChanged);
   },
 
   componentWillUnmount: function componentWillUnmount() {
-    //voteEvents.removeListener('AnswerChanged',this.answerChanged);
+    window.voteEvents.removeListener('AnswerChanged', this.answerChanged);
   },
 
   registerVote: function registerVote() {
@@ -46,7 +42,7 @@ var VotesBlock = React.createClass({
     var _this2 = this;
 
     var answersCode = this.state.info.answers.map(function (v) {
-      return React.createElement(_VoteAnswer2.default, { key: v.code,
+      return React.createElement(VoteAnswer, { key: v.code,
         code: v.code, text: v.text, freeinput: v.freeinput, count: v.count,
         selected: v.code == _this2.state.selectedAnswer,
         showMode: _this2.state.showMode });

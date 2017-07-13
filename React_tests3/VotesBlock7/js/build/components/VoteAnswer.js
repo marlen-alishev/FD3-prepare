@@ -1,9 +1,10 @@
 "use strict";
 
 var React = require('react');
+var EventEmitter = require('events').EventEmitter;
 
 var VoteAnswer = React.createClass({
-  displayName: "VoteAnswer",
+  displayName: 'VoteAnswer',
 
 
   getInitialState: function getInitialState() {
@@ -26,37 +27,37 @@ var VoteAnswer = React.createClass({
   },
 
   changed: function changed(EO) {
-    //voteEvents.emit('AnswerChanged',EO.target.value);
+    window.voteEvents.emit('AnswerChanged', EO.target.value);
   },
 
   render: function render() {
     return this.state.showMode == 1 ? React.createElement(
-      "div",
-      { className: "Answer" },
+      'div',
+      { className: 'Answer' },
       React.createElement(
-        "div",
-        { className: "Count" },
+        'div',
+        { className: 'Count' },
         this.state.count
       ),
       React.createElement(
-        "div",
-        { className: "Text" },
+        'div',
+        { className: 'Text' },
         this.state.text
       )
     ) : React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        "label",
-        { className: "Answer" },
-        React.createElement("input", { type: "radio", value: this.state.code, name: "voteanswer", defaultChecked: this.state.selected, onClick: this.changed }),
+        'label',
+        { className: 'Answer' },
+        React.createElement('input', { type: 'radio', value: this.state.code, name: 'voteanswer', defaultChecked: this.state.selected, onClick: this.changed }),
         React.createElement(
-          "span",
+          'span',
           null,
           this.state.text
         )
       ),
-      this.state.freeinput ? React.createElement("input", { type: "text", name: "votefreeinput", className: "FreeInput", disabled: !this.state.selected }) : null
+      this.state.freeinput ? React.createElement('input', { type: 'text', name: 'votefreeinput', className: 'FreeInput', disabled: !this.state.selected }) : null
     );
   }
 

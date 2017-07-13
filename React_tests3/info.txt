@@ -10,6 +10,6 @@ VotesBlock4 - перешли от передачи callback через props к 
 VotesBlock5 - перешли к npm и локальному lite-server вместо Apache
 VotesBlock6 - используем глобальный lite-server
 VotesBlock7 - 
-  пробуем отказаться от загружаемых react и babel, заменяем на модули npm
+  отказываемся от загружаемых react, babel, eventemitter, заменяем на модули npm
   правильная структура каталогов
   модули CommonJS
