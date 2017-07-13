@@ -14,5 +14,7 @@ VotesBlock7 -
   правильная структура каталогов
   модули CommonJS
   событие создаётся глобально в window
+  для сборки используем Browserify
 VotesBlock8 - выносим событие в отдельный модуль
 VotesBlock9 - заменяем React.createClass на ES6-классы
+VotesBlock10 - для сборки используем Webpack
