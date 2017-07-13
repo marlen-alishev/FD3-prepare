@@ -1,0 +1,7 @@
+{ 
+    "name": "VotesBlock6",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "lite-server"
+    }
+}

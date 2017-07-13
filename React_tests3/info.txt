@@ -7,3 +7,5 @@ VotesBlock1 - загружаемый React, без JSX, без вложенны�
 VotesBlock2 - есть вложенные компоненты
 VotesBlock3 - подключен Babel, JSX
 VotesBlock4 - перешли от передачи callback через props к EventEmitter
+VotesBlock5 - перешли к npm и локальному lite-server вместо Apache
+VotesBlock6 - используем глобальный lite-server
