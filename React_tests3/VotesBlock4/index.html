@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>Vote</title>
+</head> 
+<body> 
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+  <script type="text/javascript" src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/EventEmitter/5.2.2/EventEmitter.min.js"></script>
+
+  <div id="container2"></div> 
+
+  <script>
+    "use strict";
+    var VotesBlock=null;
+    var VoteAnswer=null;
+    var voteEvents=new EventEmitter();
+  </script>
+  <script src="VoteAnswer.js" type="text/babel"></script>
+  <script src="VotesBlock.js" type="text/babel"></script>
+  <link rel="stylesheet" type="text/css" href="VotesBlock.css" />
+
+  <script type="text/babel">
+
+    var votesInfo={
+      question:'Как вы относитесь к программированию?',
+      answers: [ 
+        {text:'хорошо',code:1,count:222}, 
+        {text:'не получается',code:2,count:333}, 
+        {text:'избегаю',code:3,count:111},
+        {text:'другое',code:4,count:444,freeinput:true},
+        ],
+    };
+
+    ReactDOM.render(
+      <VotesBlock info={votesInfo} showMode="2" />,
+      document.getElementById('container2') 
+    );
+
+  </script>
+
+</body> 
+</html>

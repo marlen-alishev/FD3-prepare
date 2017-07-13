@@ -1,0 +1,9 @@
+﻿http://localhost/React_tests3/VotesBlock1/index.html
+http://localhost/React_tests3/VotesBlock2/index.html
+http://localhost/React_tests3/VotesBlock3/index.html
+http://localhost/React_tests3/VotesBlock4/index.html
+
+VotesBlock1 - загружаемый React, без JSX, без вложенных компонентов
+VotesBlock2 - есть вложенные компоненты
+VotesBlock3 - подключен Babel, JSX
+VotesBlock4 - перешли от передачи callback через props к EventEmitter
