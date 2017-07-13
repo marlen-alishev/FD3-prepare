@@ -13,3 +13,6 @@ VotesBlock7 -
   отказываемся от загружаемых react, babel, eventemitter, заменяем на модули npm
   правильная структура каталогов
   модули CommonJS
+  событие создаётся глобально в window
+VotesBlock8 - выносим событие в отдельный модуль
+VotesBlock9 - заменяем React.createClass на ES6-классы

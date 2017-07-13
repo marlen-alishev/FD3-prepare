@@ -1,0 +1,40 @@
+
+.VotesBlock .Answers div.Answer
+{
+  padding: 2px 0;
+}
+
+.VotesBlock .Answers div.Answer .Count
+{
+  float: right;
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.VotesBlock .Answers div.Answer .Text
+{
+  margin-right: 30px;
+}
+
+.VotesBlock .Answers label.Answer
+{
+}
+
+.VotesBlock .Answers label.Answer input
+{
+  margin: 0 5px 0 0;
+}
+
+.VotesBlock .Answers label.Answer span
+{
+  vertical-align: 3px;
+}
+
+.VotesBlock .Answers .FreeInput
+{
+  width: 100px;
+  margin-left: 5px;
+  vertical-align: 3px;
+}
+
