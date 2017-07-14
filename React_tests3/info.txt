@@ -20,3 +20,4 @@ VotesBlock9 -
   заменяем React.createClass на ES6-классы
   автоматизируем процесс сборки
 VotesBlock10 - для сборки js и css используем Webpack
+VotesBlock11 - вместо lite-server используем webpack-dev-server
