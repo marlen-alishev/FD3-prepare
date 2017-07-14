@@ -6,6 +6,8 @@ var EventEmitter = require('events').EventEmitter;
 var VoteAnswer = require('./VoteAnswer');
 var voteEvents = require('../VoteEvents');
 
+require('../../css/components/VotesBlock.css');
+
 class VotesBlock extends React.Component {
 
   constructor(props) {

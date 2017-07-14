@@ -3,7 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractCSS = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css"
+    filename: "bundle.css"
 });
 
 module.exports = { 

@@ -22739,6 +22739,8 @@ var EventEmitter = __webpack_require__(50).EventEmitter;
 var VoteAnswer = __webpack_require__(187);
 var voteEvents = __webpack_require__(83);
 
+__webpack_require__(189);
+
 var VotesBlock = function (_React$Component) {
   _inherits(VotesBlock, _React$Component);
 
@@ -22835,6 +22837,8 @@ var EventEmitter = __webpack_require__(50).EventEmitter;
 
 var voteEvents = __webpack_require__(83);
 
+__webpack_require__(188);
+
 var VoteAnswer = function (_React$Component) {
   _inherits(VoteAnswer, _React$Component);
 
@@ -22906,6 +22910,18 @@ var VoteAnswer = function (_React$Component) {
 }(React.Component);
 
 module.exports = VoteAnswer;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
