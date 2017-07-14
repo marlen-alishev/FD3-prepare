@@ -12,11 +12,6 @@ module.exports = {
         path: __dirname, // путь к каталогу выходных файлов
         filename: "bundle.js"  // название создаваемого файла 
     }, 
-    /*
-    resolve: {
-        extensions: ['*', '.js', '.jsx']
-    },
-    */
     module:{ 
         rules:[
             { 
@@ -34,5 +29,10 @@ module.exports = {
     },
     plugins: [
         extractCSS
-    ]    
+    ],
+    watchOptions: {
+        aggregateTimeout: 500, // пересобирать проект через 0.5 сек после окончания изменений
+        poll: 1000, // искать изменения раз в секунду
+        ignored: /node_modules/
+    }    
 }

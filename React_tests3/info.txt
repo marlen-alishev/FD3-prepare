@@ -19,4 +19,4 @@ VotesBlock8 - выносим событие в отдельный модуль
 VotesBlock9 - 
   заменяем React.createClass на ES6-классы
   автоматизируем процесс сборки
-VotesBlock10 - для сборки используем Webpack
+VotesBlock10 - для сборки js и css используем Webpack
